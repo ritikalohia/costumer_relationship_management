@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load tailwind_filter %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form| }}
+    <button type="submit">Login</button>
+    <hr/>
+    <a href="{% url 'reset-password' %}"> Foget password? </a>
+</form>
+
+{% endblock content %}
